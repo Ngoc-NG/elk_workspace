@@ -1,0 +1,35 @@
+GET mos-*/_search
+{
+  "aggs": {
+    "2": {
+      "terms": {
+        "field": "mos",
+        "size": 5,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    }
+  },
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match_all": {}
+        },
+        {
+          "range": {
+            "@timestamp": {
+              "gte": 1528878580277,
+              "lte": 1528879480278,
+              "format": "epoch_millis"
+            }
+          }
+        }
+      ],
+      "filter": [],
+      "should": [],
+      "must_not": []
+    }
+  }
+}

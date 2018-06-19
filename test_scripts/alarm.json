@@ -1,0 +1,88 @@
+{
+	"_index": "watcher",
+	"_type": "sentinl-watcher",
+	"_new": "true",
+	"_source": {
+		"title": "watcher_title",
+		"disable": false,
+		"report": false,
+		"trigger": {
+			"schedule": {
+				"later": "every 5 minutes"
+			}
+		},
+		"input": {
+			"search": {
+				"request": {
+					"index": [
+						"logstash-*"
+					],
+					"body": {
+						"size": 0,
+						"_source": {
+							"excludes": []
+						},
+						"aggs": {
+							"2": {
+								"date_histogram": {
+									"field": "@timestamp",
+									"interval": "5m",
+									"time_zone": "Europe/Berlin",
+									"min_doc_count": 1
+								}
+							}
+						},
+						"stored_fields": [
+							"*"
+						],
+						"script_fields": {},
+						"docvalue_fields": [
+							"@timestamp",
+							"relatedContent.article:modified_time",
+							"relatedContent.article:published_time",
+							"utc_time"
+						],
+						"query": {
+							"bool": {
+								"must": [
+									{
+										"match_all": {}
+									},
+									{
+										"range": {
+											"@timestamp": {
+												"gte": 1465900856755,
+												"lte": 1528972856755,
+												"format": "epoch_millis"
+											}
+										}
+									}
+								],
+								"filter": [],
+								"should": [],
+								"must_not": []
+							}
+						}
+					}
+				}
+			}
+		},
+		"condition": {
+			"script": {
+				"script": "payload.hits.total > 100"
+			}
+		},
+		"actions": {
+			"email_admin": {
+				"throttle_period": "15m",
+				"email": {
+					"to": "alarm@localhost",
+					"from": "sentinl@localhost",
+					"subject": "Alarm",
+					"priority": "high",
+					"body": "Found {{payload.hits.total}} Events"
+				}
+			}
+		}
+	}
+}

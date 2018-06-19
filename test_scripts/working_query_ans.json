@@ -1,0 +1,144 @@
+{
+    "took": 3,
+    "timed_out": false,
+    "_shards": {
+      "total": 10,
+      "successful": 10,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": 154,
+      "max_score": 2,
+      "hits": [
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "b-lF-GMBjSS3ICNf1Nlj",
+          "_score": 2,
+          "_source": {
+            "mos": 1,
+            "@timestamp": "2018-06-13T08:31:55.984"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "celF-GMBjSS3ICNf-9m8",
+          "_score": 2,
+          "_source": {
+            "mos": 1,
+            "@timestamp": "2018-06-13T08:32:06.058"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "delG-GMBjSS3ICNfStlz",
+          "_score": 2,
+          "_source": {
+            "mos": 4,
+            "@timestamp": "2018-06-13T08:32:26.220"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "eelG-GMBjSS3ICNfmNny",
+          "_score": 2,
+          "_source": {
+            "mos": 5,
+            "@timestamp": "2018-06-13T08:32:46.312"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "eulG-GMBjSS3ICNfrNmP",
+          "_score": 2,
+          "_source": {
+            "mos": 2,
+            "@timestamp": "2018-06-13T08:32:51.336"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "e-lG-GMBjSS3ICNfwNk6",
+          "_score": 2,
+          "_source": {
+            "mos": 1,
+            "@timestamp": "2018-06-13T08:32:56.358"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "felG-GMBjSS3ICNf59mB",
+          "_score": 2,
+          "_source": {
+            "mos": 3,
+            "@timestamp": "2018-06-13T08:33:06.423"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "fulG-GMBjSS3ICNf-9kn",
+          "_score": 2,
+          "_source": {
+            "mos": 4,
+            "@timestamp": "2018-06-13T08:33:11.453"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "ielH-GMBjSS3ICNf09lr",
+          "_score": 2,
+          "_source": {
+            "mos": 1,
+            "@timestamp": "2018-06-13T08:34:06.816"
+          }
+        },
+        {
+          "_index": "mos-2018.06.13",
+          "_type": "mos",
+          "_id": "lelI-GMBjSS3ICNfvtn-",
+          "_score": 2,
+          "_source": {
+            "mos": 5,
+            "@timestamp": "2018-06-13T08:35:07.115"
+          }
+        }
+      ]
+    },
+    "aggregations": {
+      "2": {
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0,
+        "buckets": [
+          {
+            "key": 5,
+            "doc_count": 35
+          },
+          {
+            "key": 3,
+            "doc_count": 32
+          },
+          {
+            "key": 1,
+            "doc_count": 30
+          },
+          {
+            "key": 4,
+            "doc_count": 29
+          },
+          {
+            "key": 2,
+            "doc_count": 28
+          }
+        ]
+      }
+    }
+  }

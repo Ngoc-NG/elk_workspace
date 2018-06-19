@@ -1,4 +1,4 @@
-version: '2'
+version: '3.6'
 
 services:
 
@@ -15,20 +15,20 @@ services:
     networks:
       - elk
 
-  logstash:
-    build:
-      context: logstash/
-    volumes:
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-    ports:
-      - "5000:5000"
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
-    depends_on:
-      - elasticsearch
+  #logstash:
+  #  build:
+  #    context: logstash/
+  #  volumes:
+  #    - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+  #    - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+  #  ports:
+  #    - "5000:5000"
+  #  environment:
+  #    LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+  #  networks:
+  #    - elk
+  #  depends_on:
+  #    - elasticsearch
 
   kibana:
     build:
