@@ -112,9 +112,15 @@ if (alarm._source.input.search.request.body.query.bool.must) {
                         relative_time = time_arr[largest_possible_unit];
                         console.log("Relative time: ", relative_time);
                         if(largest_possible_unit !== time_arr.length){
-                            // convert 
+                            // convert
                             for(let k=largest_possible_unit + 1; k<time_arr.length;++k){ // since the default value is added we start at the next time_unit
-                                relative_time += (time_arr[k] * time_contents[k-1]); // k-1 because the units is the relationship with itself and one "time-unit" up
+                                let time_size = 1;
+                                for(let g=k;(g>largest_possible_unit) && (time_arr[k] !== 0);--g){
+                                    console.log("k: ", k , "g: ", g, "time_size", time_size, "time_contents:", time_contents);                                
+                                    time_size *= time_contents[g-1]; // k-1 because the units is the relationship with itself and one "time-unit" up
+                                }
+                                relative_time += time_arr[k] * time_size;
+                                console.log("Relative time:" , relative_time);  
                             }
                         }
                         console.log("Relative time in correct format: ", relative_time);
