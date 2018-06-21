@@ -41,15 +41,15 @@ var alarm;
 var alarm_data = fs.readFileSync('./alarm.json');
 alarm = JSON.parse(alarm_data);
 
-// [millisec, sec, min, hour, day]
-let getFlatUTCArray = (base_value, time_fractions) =>  {
-    time_data = [base_value];
-    for (i = 0; i < time_fractions.length; i++) {
-        time_data.push(parseInt(time_data[i] / time_fractions[i]));
-        time_data[i] = time_data[i] % time_fractions[i];
+// [ sec, min, hour, day, week]
+let getFlatUTCArray = (baseValue, timeFractions) =>  {
+    let timeData = [baseValue];
+    for (let i = 0; i < timeFractions.length; i++) {
+      timeData.push(parseInt(timeData[i] / timeFractions[i]));
+      timeData[i] = timeData[i] % timeFractions[i];
     };
-    return time_data;
-};
+    return timeData;
+  };
 
 // [millisec, sec, min, hour, day]
 console.log(getFlatUTCArray(63072000000, [1000, 60, 60, 24]))
@@ -111,13 +111,15 @@ if (alarm._source.input.search.request.body.query.bool.must) {
                         console.log("Largest possible unit: ", largest_possible_unit);
                         relative_time = time_arr[largest_possible_unit];
                         console.log("Relative time: ", relative_time);
-                        if(largest_possible_unit !== time_arr.length){
+                        if(largest_possible_unit <= time_arr.length){
                             // convert
                             for(let k=largest_possible_unit + 1; k<time_arr.length;++k){ // since the default value is added we start at the next time_unit
                                 let time_size = 1;
-                                for(let g=k;(g>largest_possible_unit) && (time_arr[k] !== 0);--g){
-                                    console.log("k: ", k , "g: ", g, "time_size", time_size, "time_contents:", time_contents);                                
-                                    time_size *= time_contents[g-1]; // k-1 because the units is the relationship with itself and one "time-unit" up
+                                if(time_arr[k] !== 0) {
+                                    for(let g=k;g>largest_possible_unit;--g){
+                                        console.log("k: ", k , "g: ", g, "time_size", time_size, "time_contents:", time_contents);                                
+                                        time_size *= time_contents[g-1]; // k-1 because the units is the relationship with itself and one "time-unit" up
+                                    }
                                 }
                                 relative_time += time_arr[k] * time_size;
                                 console.log("Relative time:" , relative_time);  
@@ -125,7 +127,7 @@ if (alarm._source.input.search.request.body.query.bool.must) {
                         }
                         console.log("Relative time in correct format: ", relative_time);
                         newTimestamp.gte = 'now-' + relative_time + units[largest_possible_unit] + '/' + units[largest_possible_unit];
-                        newTimestamp.lte = 'now-' + units[largest_possible_unit];
+                        newTimestamp.lte = 'now/' + units[largest_possible_unit];
                         
                         console.log(newTimestamp)
 
