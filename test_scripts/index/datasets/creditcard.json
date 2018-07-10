@@ -1,0 +1,124 @@
+{
+  "properties": {
+    "Amount": {
+      "type": "float"
+    },
+    "Class": {
+      "type": "integer"
+    },
+    "Time": {
+      "type": "long"
+    },
+    "V1": {
+      "type": "float"
+    },
+    "V10": {
+      "type": "float"
+    },
+    "V11": {
+      "type": "float"
+    },
+    "V12": {
+      "type": "float"
+    },
+    "V13": {
+      "type": "float"
+    },
+    "V14": {
+      "type": "float"
+    },
+    "V15": {
+      "type": "float"
+    },
+    "V16": {
+      "type": "float"
+    },
+    "V17": {
+      "type": "float"
+    },
+    "V18": {
+      "type": "float"
+    },
+    "V19": {
+      "type": "float"
+    },
+    "V2": {
+      "type": "float"
+    },
+    "V20": {
+      "type": "float"
+    },
+    "V21": {
+      "type": "float"
+    },
+    "V22": {
+      "type": "float"
+    },
+    "V23": {
+      "type": "float"
+    },
+    "V24": {
+      "type": "float"
+    },
+    "V25": {
+      "type": "float"
+    },
+    "V26": {
+      "type": "float"
+    },
+    "V27": {
+      "type": "float"
+    },
+    "V28": {
+      "type": "float"
+    },
+    "V3": {
+      "type": "float"
+    },
+    "V4": {
+      "type": "float"
+    },
+    "V5": {
+      "type": "float"
+    },
+    "V6": {
+      "type": "float"
+    },
+    "V7": {
+      "type": "float"
+    },
+    "V8": {
+      "type": "float"
+    },
+    "V9": {
+      "type": "float"
+    },
+    "host": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "message": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    "path": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    }
+  }
+}

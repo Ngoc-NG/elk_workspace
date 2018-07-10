@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "auth": "nodemon authentication/basic.js"
   },
   "keywords": [
     "sentinl",
@@ -14,6 +15,9 @@
   "author": "HL",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.0",
+    "elasticsearch": "^15.1.1",
+    "lodash": "^4.17.10",
     "nodemon": "^1.17.5"
   }
 }

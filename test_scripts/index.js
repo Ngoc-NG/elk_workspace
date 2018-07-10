@@ -1,5 +1,7 @@
 var fs = require('fs');
 var obj;
+var ld = require('lodash');
+
 
 /* 1.
     var match=false; payload.aggregations.forEach(function(h){ h.buckets.forEach(function(g){if (g.doc_count>40){ return match;} match;})})
@@ -143,3 +145,9 @@ if (alarm._source.input.search.request.body.query.bool.must) {
     }
 }
 console.log(JSON.stringify(alarm._source.input.search.request.body.query.bool));
+
+
+const getConfiguration = _.once((server) => {
+    console.log(server.config().get('sentinl'));
+    return server.config().get('sentinl');
+  });

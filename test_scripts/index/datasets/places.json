@@ -1,0 +1,29 @@
+{
+  "places": [
+    {
+      "label": "Kiev",
+      "arrive": "2010-09-05",
+      "depart": ["2050-05-25", "2012-05-01"]
+    },
+    {
+      "label": "Berlin",
+      "arrive": "2015-01-01",
+      "depart": "2022-01-01"
+    },
+    {
+      "label": "Rome",
+      "arrive": "2016-02-01",
+      "depart": "2022-02-01"
+    },
+    {
+      "label": "Milan",
+      "arrive": "2013-01-01",
+      "depart": "2023-01-01"
+    },
+    {
+      "label": "Vienna",
+      "arrive": "2014-02-01",
+      "depart": "2024-02-01"
+    }
+  ]
+}

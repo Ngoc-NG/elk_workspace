@@ -1,0 +1,178 @@
+{
+  "properties" : {
+     "Arrest": {
+       "type": "boolean"
+     },
+     "Beat": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Block": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Case_Number": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Community_Area": {
+       "type": "float"
+     },
+     "Date": {
+        "type": "date"
+     },
+     "Description": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "District": {
+       "type": "float"
+     },
+     "Domestic": {
+       "type": "boolean"
+     },
+     "FBI_Code": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "ID": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "IUCR": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Latitude": {
+       "type": "text"
+     },
+     "Location": {
+       "type": "text"
+     },
+     "Location_Description": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Longitude": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Primary_Type": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Row_ID": {
+       "type": "long"
+     },
+     "Updated_On": {
+       "type": "date"
+     },
+     "Ward": {
+       "type": "float"
+     },
+     "X_Coordinate": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Y_Coordinate": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "Year": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "host": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "message": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     },
+     "path": {
+       "type": "text",
+       "fields": {
+         "keyword": {
+           "type": "keyword",
+           "ignore_above": 256
+         }
+       }
+     }
+  }
+}

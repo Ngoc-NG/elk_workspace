@@ -1,0 +1,10 @@
+{
+    "es": {
+        "index": ".kibana",
+        "type": "doc",
+        "number_of_results": 50
+    },
+    "authentication": {
+        "impersonate": false
+    }
+}

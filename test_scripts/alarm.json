@@ -15,7 +15,8 @@
 			"search": {
 				"request": {
 					"index": [
-						"logstash-*"
+						"<logstash-{now-1d/d}>",
+						"<logstash-{now/d}>"
 					],
 					"body": {
 						"size": 0,

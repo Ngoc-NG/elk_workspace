@@ -1,0 +1,88 @@
+{
+  "spaceship": [
+    {
+      "label": "Fuselage",
+      "produced_date": "2010-09-05",
+      "end_of_work_date": "2050-05-25"
+    },
+    {
+      "label": "Pumps",
+      "produced_date": "2015-01-01",
+      "end_of_work_date": "2022-01-01"
+    },
+    {
+      "label": "Oxidizer",
+      "produced_date": "2016-02-01",
+      "end_of_work_date": "2022-02-01"
+    },
+    {
+      "label": "Engine",
+      "produced_date": "2013-01-01",
+      "end_of_work_date": "2023-01-01"
+    },
+    {
+      "label": "Nozzle",
+      "produced_date": "2014-02-01",
+      "end_of_work_date": "2024-02-01"
+    }
+  ],
+  "spaceship_parts": [
+    {
+      "item_id": 1,
+      "item_type": "spaceship_parts",
+      "label": "Fuselage"
+    },
+    {
+      "item_id": 2,
+      "item_type": "spaceship_parts",
+      "label": "Pumps"
+    },
+    {
+      "item_id": 3,
+      "item_type": "spaceship_parts",
+      "label": "Oxidizer"
+    },
+    {
+      "item_id": 4,
+      "item_type": "spaceship_parts",
+      "label": "Engine"
+    },
+    {
+      "item_id": 5,
+      "item_type": "spaceship_parts",
+      "label": "Nozzle"
+    }
+  ],
+  "spaceship_service": [
+    {
+      "item_id": 1,
+      "item_type": "spaceship_service",
+      "produced_date": "2010-09-05",
+      "end_of_work_date": "2030-09-05"
+    },
+    {
+      "item_id": 2,
+      "item_type": "spaceship_service",
+      "produced_date": "2015-01-01",
+      "end_of_work_date": "2022-01-01"
+    },
+    {
+      "item_id": 3,
+      "item_type": "spaceship_service",
+      "produced_date": "2016-02-01",
+      "end_of_work_date": "2022-02-01"
+    },
+    {
+      "item_id": 4,
+      "item_type": "spaceship_service",
+      "produced_date": "2013-01-01",
+      "end_of_work_date": "2023-01-01"
+    },
+    {
+      "item_id": 5,
+      "item_type": "spaceship_service",
+      "produced_date": "2014-02-01",
+      "end_of_work_date": "2024-02-01"
+    }
+  ]
+}
