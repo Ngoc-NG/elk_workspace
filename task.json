@@ -1,0 +1,43 @@
+Watchers: {
+    "url": "#/3679bee0-843d-11e8-b023-81647bf52a16",
+    "_source": {
+        "actions": {
+            "email_admin": {
+                "throttle_period": "0h15m0s",
+                "email": {
+                    "to": "alarm@localhost",
+                    "from": "sentinl@localhost",
+                    "subject": "Alarm",
+                    "priority": "high",
+                    "body": "Found {{payload.hits.total}} Events"
+                }
+            }
+        },
+        "input": {
+            "search": {
+                "request": {
+                    "index": [
+                        "mos-*"
+                    ],
+                    "body": {}
+                }
+            }
+        },
+        "condition": {
+            "script": {
+                "script": "payload.hits.total >=0"
+            }
+        },
+        "transform": {},
+        "trigger": {
+            "schedule": {
+                "later": "every 2 minutes"
+            }
+        },
+        "disable": false,
+        "report": false,
+        "title": "watcher_title_sentinl"
+    },
+    "_id": "3679bee0-843d-11e8-b023-81647bf52a16",
+    "$$hashKey": "object:66"
+}

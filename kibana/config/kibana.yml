@@ -4,7 +4,7 @@
 server.name: kibana
 server.host: "0"
 elasticsearch.url: http://elasticsearch:9200
-
+logging.verbose: true
 
 sentinl:
   es:
@@ -18,9 +18,10 @@ sentinl:
     alarm_type: 'sentinl-alarm'
   settings:
     email:
-      active: false
+      active: true
       host: 'localhost'
-      # user: 'admin'
+      user: 'havlan@localhost.com'
+      ssl: false
       # password: 'password'
       # port: 25
       # domain: 'beast.com'

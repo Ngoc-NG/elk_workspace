@@ -1,0 +1,140 @@
+{
+    "took": 14,
+    "timed_out": false,
+    "_shards": {
+        "total": 1,
+        "successful": 1,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": 4,
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": ".kibana",
+                "_type": "doc",
+                "_id": "index-pattern:c13e7590-7b7b-11e8-b9eb-09c37a7443dc",
+                "_score": 1.0,
+                "_source": {
+                    "type": "index-pattern",
+                    "updated_at": "2018-06-29T09:06:50.191Z",
+                    "index-pattern": {
+                        "title": "uib-*",
+                        "timeFieldName": "post_date",
+                        "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"line_id\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"message\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"message.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"play_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"post_date\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"speaker\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"speech_number\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"user\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"user.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+                    }
+                }
+            },
+            {
+                "_index": ".kibana",
+                "_type": "doc",
+                "_id": "sentinl-watcher:64df0a20-7b7c-11e8-b9eb-09c37a7443dc",
+                "_score": 1.0,
+                "_source": {
+                    "type": "sentinl-watcher",
+                    "updated_at": "2018-06-29T09:50:32.127Z",
+                    "sentinl-watcher": {
+                        "title": "test_0",
+                        "input": {
+                            "search": {
+                                "request": {
+                                    "index": [
+                                        "test-*"
+                                    ],
+                                    "body": {
+                                        "size": 0,
+                                        "_source": {
+                                            "excludes": []
+                                        },
+                                        "aggs": {},
+                                        "stored_fields": [
+                                            "*"
+                                        ],
+                                        "script_fields": {},
+                                        "docvalue_fields": [
+                                            "post_date"
+                                        ],
+                                        "query": {
+                                            "bool": {
+                                                "must": [
+                                                    {
+                                                        "match_all": {}
+                                                    },
+                                                    {
+                                                        "range": {
+                                                            "post_date": {
+                                                                "gte": 1527671436949,
+                                                                "lte": 1530263436949,
+                                                                "format": "epoch_millis"
+                                                            }
+                                                        }
+                                                    }
+                                                ],
+                                                "filter": [],
+                                                "should": [],
+                                                "must_not": []
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "actions": {
+                            "New slack action 4n92u5lwpsf": {
+                                "throttle_period": "0h0m1s",
+                                "slack": {
+                                    "channel": "",
+                                    "message": "Yeboiiii {{payload.hits.total}}",
+                                    "stateless": false,
+                                    "priority": "low"
+                                }
+                            }
+                        },
+                        "transform": {},
+                        "condition": {
+                            "script": {
+                                "script": "payload.hits.total > 0"
+                            }
+                        },
+                        "report": false,
+                        "disable": true,
+                        "trigger": {
+                            "schedule": {
+                                "later": "every 5 minutes"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "_index": ".kibana",
+                "_type": "doc",
+                "_id": "index-pattern:134396a0-7b8a-11e8-b9eb-09c37a7443dc",
+                "_score": 1.0,
+                "_source": {
+                    "type": "index-pattern",
+                    "updated_at": "2018-06-29T10:49:20.012Z",
+                    "index-pattern": {
+                        "title": "institusjon*",
+                        "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"navn\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"navn.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+                    }
+                }
+            },
+            {
+                "_index": ".kibana",
+                "_type": "doc",
+                "_id": "config:6.2.4",
+                "_score": 1.0,
+                "_source": {
+                    "type": "config",
+                    "updated_at": "2018-06-29T10:49:20.069Z",
+                    "config": {
+                        "buildNum": 16627,
+                        "defaultIndex": "134396a0-7b8a-11e8-b9eb-09c37a7443dc"
+                    }
+                }
+            }
+        ]
+    }
+}

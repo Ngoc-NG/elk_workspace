@@ -1,8 +1,8 @@
 const elasticsearch = require('elasticsearch');
 const bcrypt = require('bcrypt');
 
-const login = 'admin';
-const password = 'admin';
+const login = 'sentinl';
+const password = 'sentinl';
 
 const config = {
   host: [
@@ -25,7 +25,7 @@ const body = {
       must : [
         {
           match : {
-            _id : "sentinl-user:3679bee0-843d-11e8-b023-81647bf52a16"
+            _id : "sentinl-user:b37d5290-84d7-11e8-acf4-9df877c2f7e4"
           } 
         }
     ]
