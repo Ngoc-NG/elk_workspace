@@ -3,3 +3,6 @@ node_modules
 *.zip
 sentinl-v6.2.4.zip
 sentinl*
+
+test_script/package-lock.json
+package-lock.json
